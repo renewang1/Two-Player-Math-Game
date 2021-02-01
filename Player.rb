@@ -1,9 +1,8 @@
-class Lives
+class Player
   attr_reader :player1_lives, :player2_lives
 
   def initialize
-    @player1_lives = 3
-    @player2_lives = 3
+    @player_lives = 3
   end
 
   def reduce_life(player)
