@@ -1,17 +1,16 @@
 class Question
-  def initialize(turn)
+  def initialize
     @number1 = nil
     @number2 = nil
-    @turn = turn
   end
 
-  def new_question
+  def new_question(turn)
     puts "----- NEW TURN -----"
     @number1 = rand(10)
     @number2 = rand(10)
-    if @turn == 1
+    if turn == 1
       puts "Player1: What does #{@number1} plus #{@number2} equal?"
-    elsif @turn == 2
+    elsif turn == 2
       puts "Player2: What does #{@number1} plus #{@number2} equal?"
     end
     answer = gets.chomp.to_i
